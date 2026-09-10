@@ -1,0 +1,20 @@
+#define ParFileDir .
+
+Material="PolySilicon" {
+  #includeext "ParFileDir/PolySilicon.par"
+}
+Material="GatePolySilicon" {
+  # WARNING: no parameter file found for material GatePolySilicon in the material database
+}
+Material="Nitride" {
+  #includeext "ParFileDir/Nitride.par"
+}
+Material="SiO2" {
+  #includeext "ParFileDir/SiO2.par"
+}
+Material="Silicide" {
+  #includeext "ParFileDir/Silicide.par"
+}
+Material="Silicon" {
+  #includeext "ParFileDir/Silicon.par"
+}

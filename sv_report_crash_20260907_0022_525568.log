@@ -1,0 +1,68 @@
+###########################################
+# Sentaurus Visual V-2023.12.
+# Tcl log file.
+#------------------------------------------
+# Date: Sep 07, 2026. 00:21:22.
+# Version: 35.2.8515123 (2.8515123)
+# Mode: Interactive (GUI).
+# Mesa: enabled.
+# Hostname: cdsl29.cdsl.iitbbs.ac.in.
+# Machine: Linux, x86_64, x86_64.
+# Kernel: 5.14.0-503.11.1.el9_5.x86_64.
+###########################################
+
+load_file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/BV_n12_des.plt
+create_plot -1d
+select_plots {Plot_1}
+#-> Plot_1
+#-> Plot_1
+#-> BV_n12_des
+create_curve -axisX {gate OuterVoltage} -axisY {drain TotalCurrent} -dataset {BV_n12_des} -plot Plot_1
+#-> Curve_1
+create_curve -axisX {drain OuterVoltage} -axisY {drain TotalCurrent} -dataset {BV_n12_des} -plot Plot_1
+#-> Curve_2
+remove_curves -plot Plot_1 {Curve_1}
+#-> Curve_1
+
+The program was unexpectedly terminated.
+Signal SIGSEGV caught: Invalid memory reference.
+
+Stack Dump:
+#2 0x000x14bf0aa3e780 in /lib64/libc.so.6(0x14bf0aa3e730 + 0x50)
+#3 0x000x160000000e00 in ?(0x160000000e00 + 0)
+#4 0x00000000x1585308 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/bin/svisual_bin/svisual_exec(CurvePropertiesWidget::analysisChanged(int) + 0x3c)
+#5 0x000x14bf0c79c5f2 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QComboBox::currentIndexChanged(int) + 0x31)
+#6 0x000x14bf0c79ed34 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QComboBoxPrivateContainer::QComboBoxPrivateContainer(QAbstractItemView*, QComboBox*) + 0x552)
+#7 0x000x14bf0c7a127a in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QComboBox::sizeHint() const + 0x34d)
+#8 0x000x14bf0c7a1672 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QComboBox::sizeHint() const + 0x549)
+#9 0x000x14bf0c7a6a8a in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QComboBox::setModelColumn(int) + 0x335)
+#a 0x000x14bf0c188068 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Core.so.5(QObject::setProperty(char const*, QVariant const&) + 0x165c)
+#b 0x000x14bf0c79c654 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QComboBoxPrivateContainer::itemSelected(QModelIndex const&) + 0x22)
+#c 0x000x14bf0c79d354 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QComboBoxPrivateContainer::eventFilter(QObject*, QEvent*) + 0x4f2)
+#d 0x000x14bf0c152476 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Core.so.5(QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) + 0x8b)
+#e 0x000x14bf0c69ac7c in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QApplicationPrivate::notify_helper(QObject*, QEvent*) + 0x6e)
+#f 0x000x14bf0c6a3ab0 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QApplication::notify(QObject*, QEvent*) + 0x438)
+#10 0x00000000x13b4bf4 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/bin/svisual_bin/svisual_exec(MakoGUIApplication::notify(QObject*, QEvent*) + 0x42)
+#11 0x000x14bf0c152784 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Core.so.5(QCoreApplication::notifyInternal2(QObject*, QEvent*) + 0x11a)
+#12 0x000x14bf0c6a2afc in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) + 0x19e)
+#13 0x000x14bf0c6f8ed0 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QDesktopWidget::qt_metacall(QMetaObject::Call, int, void**) + 0x3928)
+#14 0x000x14bf0c6fdd78 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QDesktopWidget::qt_metacall(QMetaObject::Call, int, void**) + 0x607c)
+#15 0x000x14bf0c69ac9e in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QApplicationPrivate::notify_helper(QObject*, QEvent*) + 0x7f)
+#16 0x000x14bf0c6a3550 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Widgets.so.5(QApplication::notify(QObject*, QEvent*) + 0x188)
+#17 0x00000000x13b4bf4 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/bin/svisual_bin/svisual_exec(MakoGUIApplication::notify(QObject*, QEvent*) + 0x42)
+#18 0x000x14bf0c152784 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Core.so.5(QCoreApplication::notifyInternal2(QObject*, QEvent*) + 0x11a)
+#19 0x000x14bf0b2bcfd0 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Gui.so.5(QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*) + 0x640)
+#1a 0x000x14bf0b2be1c2 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Gui.so.5(QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) + 0x229)
+#1b 0x000x14bf0b2976a8 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Gui.so.5(QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) + 0xac)
+#1c 0x000x14befbaf9dd4 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5XcbQpa.so.5(QXcbUnixEventDispatcher::~QXcbUnixEventDispatcher() + 0x3a)
+#1d 0x000x14bf0a6e50ee in /lib64/libglib-2.0.so.0(g_main_context_dispatch + 0x19f)
+#1e 0x000x14bf0a73a540 in /lib64/libglib-2.0.so.0(0x14bf0a73a268 + 0x2d8)
+#1f 0x000x14bf0a6e2746 in /lib64/libglib-2.0.so.0(g_main_context_iteration + 0x33)
+#20 0x000x14bf0c1a842c in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Core.so.5(QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) + 0x5e)
+#21 0x000x14bf0c1514d6 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Core.so.5(QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) + 0x11b)
+#22 0x000x14bf0c158e48 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/lib/libQt5Core.so.5(QCoreApplication::exec() + 0x7c)
+#23 0x00000000x137ed9e in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/bin/svisual_bin/svisual_exec(RunMako(int, char**) + 0x218f)
+#24 0x00000000x1320cd6 in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/bin/svisual_bin/svisual_exec(main + 0x1fb)
+#25 0x000x14bf0aa29650 in /lib64/libc.so.6(0x14bf0aa295d0 + 0x80)
+#26 0x000x14bf0aa29700 in /lib64/libc.so.6(__libc_start_main + 0x80)
+#27 0x00000000x136a18d in /cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/bin/svisual_bin/svisual_exec(0x136a164 + 0x29)
