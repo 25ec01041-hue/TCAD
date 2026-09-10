@@ -1,0 +1,116 @@
+
+****************************************************************************
+***                       Sentaurus Workbench gsub                       ***
+***                          Version V-2023.12                           ***
+***                      (2.8515123, x86_64, Linux)                      ***
+***                                                                      ***
+***                Copyright (c) 1994-2023 Synopsys, Inc.                ***
+***                                                                      ***
+***  This software and the associated documentation are confidential     ***
+***  and proprietary to Synopsys, Inc.  Your use or disclosure of this   ***
+***  software is subject to the terms and conditions of a written        ***
+***  license agreement between you, or your company, and Synopsys, Inc.  ***
+****************************************************************************
+
+gsub is running on host 'cdsl29.cdsl.iitbbs.ac.in' by user 'cdsllab'
+Binary '/cad/synopsys/sentaurus/V-2023.12/tcad/current/linux64/bin/../lib/gsub0'
+Command line options '-verbose -swb_pid 5343 -q local:default -e 3 /home/cdsllab/Sarthak_Shantaneel/mosfet_copy'
+Current directory '/home/cdsllab'
+Project organization 'Traditional'
+Some relevant environment variables:
+	STROOT=/cad/synopsys/sentaurus/V-2023.12
+	STRELEASE=current
+	STROOT_LIB=/cad/synopsys/sentaurus/V-2023.12/tcad/current/lib
+	STDB=/home/cdsllab
+	DATEX=/cad/synopsys/sentaurus/V-2023.12/tcad/current/lib/datexcodes.txt
+	DISPLAY=:1
+
+Starting swblm daemon...OK
+Project '/home/cdsllab/Sarthak_Shantaneel/mosfet_copy'
+Application mode : traditional
+16:53:58 Sep 07 2026 <mosfet_copy> submitted to the batch system
+Loading global queue configuration file '/cad/synopsys/sentaurus/V-2023.12/queues/gqueues.dat'...ok
+Loading project tree '/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gtree.dat'
+>>>>> Preprocessing the project to run in normal mode
+Loading jobs and dependence graph '"/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gexec.cmd"'
+INITIALIZING PREPROCESSOR:
+Loading project tree '/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gtree.dat'
+Loading project variables '/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gvars.dat'
+--Get files to preprocess...
+--Create file handlers...
+--Read the toolflow...
+--Analyze tool-file dependencies...
+--Read all nodes to preprocess...
+--Group nodes into experiments...
+--Get all variables...
+--Get all parameters...
+PREPROCESSOR SUCCESSFULLY INITIALIZED.
+PREPROCESSING STEP 1:
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/MOSFET_dvs.cmd
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Id_Vg_Last_des.cmd
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/sdevice.par
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Id_Vg_des.cmd
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Id_Vd_des.cmd
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Eqm_des.cmd
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Breakdown_des.cmd
+PREPROCESSING STEP 2:
+---------------------------------------
+Preprocessing file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Id_Vg_des.cmd for node 3
+'@tdr@' creates dependences with the node(s) '1'
+---------------------------------------
+Preprocessing file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/sdevice.par for node 3
++++Node successfully preprocessed+++
+The node '3' has dependencies to the node(s) '1'
+Writing 'gexec.cmd'
+Loading jobs and dependence graph '"/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gexec.cmd"'
+>>>>>>>>>> job '3' status changed from 'done' to 'queued'
+-----------------------------------------------------------------
+queue "local:default" - 3
+-----------------------------------------------------------------
+>>>>>>>>>> Initializing back-end schedulers...
+>>>>>>>> Loaded Schedulers are ... local
+local% initialize 'local' scheduler data
+>>>>> List of Active Schedulers : local
+<<<<<<<<<<
+>>>>>>>>>> job '3' status changed from 'queued' to 'ready'
+INITIALIZING PREPROCESSOR:
+Loading project tree '/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gtree.dat'
+Loading jobs and dependence graph '"/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gexec.cmd"'
+Loading project variables '/home/cdsllab/Sarthak_Shantaneel/mosfet_copy/gvars.dat'
+--Get files to preprocess...
+--Create file handlers...
+--Read the toolflow...
+--Analyze tool-file dependencies...
+--Read all nodes to preprocess...
+--Group nodes into experiments...
+--Get all variables...
+--Get all parameters...
+PREPROCESSOR SUCCESSFULLY INITIALIZED.
+PREPROCESSING STEP 1:
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Id_Vg_des.cmd
+Reading file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/sdevice.par
+PREPROCESSING STEP 2:
+---------------------------------------
+Preprocessing file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/Id_Vg_des.cmd for node 3
+'@tdr@' creates dependences with the node(s) '1'
++++Preprocessing results written to /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/pp3_des.cmd
+The node '3' has dependencies to the node(s) '1'
+---------------------------------------
+Preprocessing file /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/sdevice.par for node 3
++++Preprocessing results written to /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/pp3_des.par
+The node '3' has dependencies to the node(s) '1'
+>>>>>>>>>> os_rm /home/cdsllab/Sarthak_Shantaneel/mosfet_copy/n3_des.job
+local% submit job 3 for local execution
+>>>>>>>>>> job '3' status changed from 'ready' to 'pending'
+local% exec /cad/synopsys/sentaurus/V-2023.12/bin/gjob -verbose -nice 19 --max_threads 4  -job 3 -swb_pid 5343 -gsub_pid 553592 -gsub_host cdsl29.cdsl.iitbbs.ac.in -gsub_port 45319  "/home/cdsllab/Sarthak_Shantaneel/mosfet_copy"
+>>>>>>>>>> job '3' status changed from 'pending' to 'running'
+16:53:59 Sep 07 2026     job 3 <sdevice> started on host 'cdsl29.cdsl.iitbbs.ac.in': "sdevice --max_threads 4  pp3_des.cmd"
+>>>>>>>>>> job '3' status changed from 'running' to 'done'
+16:54:50 Sep 07 2026 +++ job 3 <sdevice> done: exit(0)
+
+SCHEDULING REPORT
++++ done     : 3
+
+16:54:52 Sep 07 2026 <mosfet_copy> done (54 sec)
+>>>>>> Writing to status file 54
+gsub exits with status 0

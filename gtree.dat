@@ -1,0 +1,31 @@
+# Copyright (C) 1994-2023 Synopsys Inc.
+# swbtree vcurrent, saved by gsub0
+
+# --- simulation flow
+MOSFET sde "" {}
+Id_Vg_Last sdevice "" {}
+Id_Vg sdevice "" {}
+Id_Vd sdevice "" {}
+Id_Vd g "0.3" {0.3 0.6 0.9 1.5} R
+Eqm sdevice "" {}
+Breakdown sdevice "" {}
+# --- variables
+# --- scenarios and parameter specs
+scenario default g ""
+# --- simulation tree
+0 1 0 {} {default} 0
+1 21 1 {} {default} 0
+2 3 21 {} {default} 0
+3 5 3 {} {default} 0
+4 4 5 {0.3} {default} 0
+5 2 4 {} {default} 0
+6 12 2 {} {default} 0
+4 6 5 {0.6} {default} 0
+5 7 6 {} {default} 0
+6 13 7 {} {default} 0
+4 8 5 {0.9} {default} 0
+5 9 8 {} {default} 0
+6 14 9 {} {default} 0
+4 10 5 {1.5} {default} 0
+5 11 10 {} {default} 0
+6 15 11 {} {default} 0
